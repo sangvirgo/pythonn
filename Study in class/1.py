@@ -231,6 +231,126 @@ Y={'h','a','m'}
 # a, b, c, d, e, f = 'sonngu'
 # print(a, b, c, d, e, f)
 
-fruits = ("apple", "banana", "cherry", "orange")
-(*variable_1, variable_2, variable_3) = fruits
-print(variable_1[-1::-1], variable_2, variable_3)
+# fruits = ("apple", "banana", "cherry", "orange")
+# (*variable_1, variable_2, variable_3) = fruits
+# print(variable_1[-1::-1], variable_2, variable_3)
+
+# y=3 
+# x=y//2
+
+# while x>1:
+#     if y%x==0:
+#         print(x)
+#         break
+#     x-=1
+# else:
+#     print(y)
+
+
+# s="spam"
+# for i in s:
+#     print(i, end=" ")
+
+
+# T=((1,2),(3,4), (5,6))
+# for(_, a) in T:
+#     print(a, end=" ")
+
+
+
+# D={'a':1, 'b':2, 'c':3}
+# for key in D:
+#     print(key,"=>", D[key])
+
+
+# for (a, b, *c) in [(1, 2, 3, 4), (5, 6, 7, 8)]:
+#     print(a, b, c[-1])
+
+
+# list_a = [11, 22, 13, 14, 15, 16, 27, 18, 19, 20]
+
+# sum = 0
+
+# for i in range(1, len(list_a), 3):
+#     sum += list_a[i]
+
+# print(sum)
+
+
+# l=[1, 2, 3, 4, 5]
+
+# for i in range(len(l)):
+#     l[i]=l[i]+1
+
+# print(l)
+
+# a=[1, 2, 3, 4, 5]
+
+# for x in a:
+#     x=x+1
+
+# print(a)
+
+
+# L = [[1, 1], [2, 2], [3, 3], [4, 4], [5, 5]]
+
+# for i in range(len(L)):
+#     L[i][1] = L[i][0] + 1
+# print(L)
+
+
+# L = [[1, 1], [2, 2], [3, 3], [4, 4], [5, 5]]
+
+# for x in L:
+#     x[1] = x[0] + 1
+
+# L
+
+
+# L = [(0, 100), (1, 101), (2, 102), (3, 103), (4, 104)]
+# for item in L:
+#     item += (1,)
+# print(L)
+
+
+# L = [(0, 100), (1, 101), (2, 102), (3, 103), (4, 104)]
+# for i in range(len(L)):
+#     L[i] += (1,)
+# print(L)
+
+
+
+# l1=[1, 2, 3, 4, 5]
+# l2=[6, 7, 8, 9, 10]
+# l3=[11, 12, 13, 14]
+
+# temp=list(zip(l1, l2, l3))
+
+# print(temp)
+
+
+
+# s="spam"
+# for (offset, item) in enumerate(s):
+#     print(item, 'appears at offset', offset)
+
+
+# l=[1, 2, 3, 4, 5]   
+# l=[x+10 for x in l]
+# print(l)
+
+
+# l=[]
+# for x in 'abc':
+#     for y in 'def':
+#         l.append(x+y)
+
+# print(l)
+
+# h=[x+y for x in 'abc' for y in 'def']
+# print(h)
+
+
+my_list='abc, 123, cba, 456, 321'.split(', ')
+result=[(j, j[::-1]) for j in my_list if j[::-1]]
+print(result)
