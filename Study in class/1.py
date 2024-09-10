@@ -351,6 +351,279 @@ Y={'h','a','m'}
 # print(h)
 
 
-my_list='abc, 123, cba, 456, 321'.split(', ')
-result=[(j, j[::-1]) for j in my_list if j[::-1]]
-print(result)
+# my_list='abc, 123, cba, 456, 321'.split(', ')
+# result=[(j, j[::-1]) for j in my_list if j[::-1]]
+# print(result)
+
+
+# seq=[1, 2, 3, 4, 5]
+# a, b, c, *d=seq
+# print(a, b, c, d)
+
+
+
+# a = b = []
+# b.append(42)
+# print(a, b)
+
+
+# l=[1, 2, 3, 4, 5]
+# m=l
+# l=l+[6]
+# print(l, m)
+
+# l2=[1, 2, 3, 4, 5]
+# m2=l2
+# l2+=[6]
+# print(l2, m2)
+
+
+# Các cấu trúc này bao gồm list, dict, set, bytearray, và các đối tượng tùy chỉnh (custom objects) với thuộc tính có thể thay đổi được.
+# Trong Python, có sự khác biệt giữa các phép toán + và += khi làm việc với danh sách (list). Hãy xem xét hai đoạn mã mà bạn đã đưa ra:
+
+# Đoạn mã đầu tiên:
+# python
+# Copy code
+# l = [1, 2, 3, 4, 5]
+# m = l
+# l = l + [6]
+# print(l, m)
+# Giải thích:
+
+# l và m đều tham chiếu đến cùng một danh sách ban đầu [1, 2, 3, 4, 5].
+# Phép l = l + [6] tạo ra một danh sách mới bằng cách nối danh sách l ban đầu với danh sách [6], sau đó gán lại danh sách mới này cho biến l.
+# Bởi vì phép + tạo ra một danh sách mới và gán nó cho l, biến m vẫn tham chiếu đến danh sách ban đầu [1, 2, 3, 4, 5].
+# Kết quả là:
+
+# makefile
+# Copy code
+# l: [1, 2, 3, 4, 5, 6]
+# m: [1, 2, 3, 4, 5]
+# Đoạn mã thứ hai:
+# python
+# Copy code
+# l2 = [1, 2, 3, 4, 5]
+# m2 = l2
+# l2 += [6]
+# print(l2, m2)
+# Giải thích:
+
+# l2 và m2 đều tham chiếu đến cùng một danh sách ban đầu [1, 2, 3, 4, 5].
+# Phép l2 += [6] (hay l2.extend([6])) không tạo ra danh sách mới mà thực hiện phép cộng trực tiếp trên danh sách mà l2 và m2 cùng tham chiếu đến. Kết quả là danh sách [1, 2, 3, 4, 5] được thay đổi thành [1, 2, 3, 4, 5, 6].
+# Vì m2 và l2 cùng tham chiếu đến danh sách đó, cả hai sẽ thay đổi.
+# Kết quả là:
+
+# makefile
+# Copy code
+# l2: [1, 2, 3, 4, 5, 6]
+# m2: [1, 2, 3, 4, 5, 6]
+# Tóm lại:
+# Phép + tạo ra một danh sách mới và không thay đổi danh sách ban đầu.
+# Phép += (hay extend) thay đổi trực tiếp danh sách ban đầu, do đó tất cả các biến tham chiếu đến danh sách đó sẽ thấy sự thay đổi.
+
+
+
+# a=3
+# if a==1:
+#     print("a")
+# elif a==2:
+#     print("b")
+# else:
+#     print("c")
+
+
+# branch = {'spam': 1.25,
+#         'ham': 1.99,
+#         'eggs': 0.99}
+
+# print(branch.get('spam', 'Bad choice'))    
+
+
+
+# print(['f', 't'][bool('')])
+
+
+# Truth Values and Boolean Tests
+# print(2 or 3)
+# print(3 or 2)
+# nếu không null thì trả về giá trị đầu còn khi null trả value thứ 2
+
+# print(2 and 3)
+# print(3 and 2)
+# if not null then return value 2 else return value 1
+
+
+
+
+
+# a=3
+# b=2 if a>1 else 1
+# print(b)
+
+
+# while Loops
+# x=10
+# while x>1:
+#     print(x)
+#     x/=2
+# else:
+#     print("Done")
+
+
+# x="spam"
+# while x:
+#     print(x)
+#     x=x[1:]
+
+
+# T = [(1, 2, 3), (4, 5, 6), (7, 8, 9)]
+# for (_, a, _) in T:
+#     print(a)
+
+
+
+# D = {'a': 1, 'b': 2, 'c': 3}
+# for key in D:
+#     print(key, '=>', D[key])
+
+# for (key, value) in D.items():
+#     print(key, '=>', value)
+
+
+# list = [11, 22, 13, 14, 15, 16, 17, 18, 19, 20]
+
+# for i in range(1, len(list), 3):
+#     print(list[i])
+
+
+
+# L = [1, 2, 3, 4, 5] 
+# for i in range(len(L)):
+#     L[i] = L[i] + 1
+# print(L)
+
+
+# M = [1, 2, 3, 4, 5] 
+# for x in M:
+#     x += 1
+# print(M)
+
+
+
+# L1 = [1,3,5,7] # 4
+# L2 = [2,4,6,8] # 4
+
+# temp=list(zip(L1, L2))
+# print(temp)
+
+
+# for (x, y) in zip(L1, L2):
+#     print(x, y, "=>", x+y)
+
+
+# dictionary with zip 
+# keys=['name', 'job', 'zip']
+# values=[1, 2, 3]
+# d=dict(zip(keys, values))
+# print(d)
+
+
+# s="spam"
+# for (index, item) in enumerate(s):
+#     print(item, 'at', index)
+
+
+# for x in [1, 2, 3, 4]:
+#     print(x**2, end=' ')
+
+
+# import sys
+# print(sys.path)
+
+
+# f=open('script2.py')
+# for line in f.readlines():
+#     print(line.upper(), end='')
+
+
+# # vertion 1
+# L = [1, 2, 3, 4, 5]
+# for i in range(len(L)):
+#     L[i]+=10
+# print(L)
+
+
+# m=[1, 2, 3, 4, 5]
+# for i in m:
+#     i+=10
+# print(m)
+
+# # version 2
+# m=[x+10 for x in m]
+# print(m)
+
+
+# line=[line.rstrip() for line in open('script2.py')]
+# print(line)
+
+
+
+
+# # coding functions
+seq1=[1, 2, 3, 4, 5]
+seq2=[5, 7, 8, 9, 10]
+
+
+def intersect(seq1, seq2):
+    res=[]
+    for x in seq1:
+        if x in seq2:
+            res.append(x)
+    return res
+
+print(intersect(seq1, seq2))
+
+# x = 300
+# def myfunc():
+#     global x
+#     x += 200
+#     def mysubfunc():
+#         x = 100
+#         return x
+#     return mysubfunc
+# if __name__ == "__main__":
+#     x = 20
+#     myfunc()()
+#     print(x)
+
+
+# def minmax(test, *args):
+#     res = args[0]
+#     count = 0
+#     for arg in args[1:]:
+#         if test(arg, res):
+#             res = arg
+#             count += 1
+#     return res, count
+
+# def lessthan(x, y):
+#     return x < y
+
+# if __name__ == '__main__':
+#     print(minmax(lessthan, 4, 2, 1, 5, 6, 3))
+
+# L="123456"
+
+# def mysum1(L):
+#     return 0 if not L else L[0] + mysum1(L[1:])
+# print(mysum1(L))
+
+
+# def mysum2(L):
+#     return L[0] if len(L) == 1 else L[0] + mysum2(L[1:])
+# print(mysum2(L))
+
+# def mysum3(L):
+#     first, *rest = L  # [1, 2, 3, 4, 5]
+#     return first if not rest else first + mysum3(rest)
+# print(mysum3(L))
