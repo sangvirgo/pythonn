@@ -1,32 +1,19 @@
-def solve():
-    num = input()
-    pow_value = len(num)
-    multi_value = pow(10, pow_value - 1)
-    if len(num) < 2:
-        print(num)
-        return
+# Nhập và xử lý danh sách đầu vào
+l = list(map(int, input().strip().replace(",", "").split()))
 
-    remember = False
-    for i in range(len(num) - 1, 0, -1):
-        digit = int(num[i])
-        if remember: digit += 1
+# Khởi tạo từ điển để đếm tần suất
+d = {}
 
-        if digit >= 5: remember = True
-        else: remember = False
-
-    digit = int(num[1])
-    if remember: digit += 1
-    if digit >= 5:
-        res = (int(num[0]) + 1) * multi_value
-        print(res)
+# Đếm tần suất xuất hiện của mỗi phần tử
+for i in l:
+    if i in d:
+        d[i] += 1
     else:
-        res = int(num[0]) * multi_value
-        print(res)
+        d[i] = 1
 
-def main():
-    T = int(input())
+# Tạo bộ chứa các phần tử và tần suất tương ứng
+ele = tuple(d.keys())  # Các phần tử duy nhất
+result = tuple(d.values())  # Số lần xuất hiện của mỗi phần tử
 
-    for _ in range(T):
-        solve()
-
-main()
+# In kết quả
+print(ele, result)
