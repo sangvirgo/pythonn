@@ -45,7 +45,7 @@
 # del l[0]
 # print(l)
 
-# sort 
+# sort
 # reverse
 
 
@@ -71,12 +71,12 @@
 # y=[[4, [11, 56],5], [6,7]]
 # x1=copy.copy(y)
 # x2=copy.deepcopy(y)
-# y[0]=1  
+# y[0]=1
 # x3=y[:]
 # # y[3][1][0]=100
 # print(x1)
 # print(x2) # => different
-# print(x3) # => same     
+# print(x3) # => same
 
 
 # Y = [[2, [3, 31], 4], [2, 3, [4, 41]], 3]
@@ -92,7 +92,7 @@
 # Y[0][1][1] = 1  # Thay đổi phần tử bên trong một danh sách con của Y
 
 # print("X1", X1)
-# print("X2", X2) 
+# print("X2", X2)
 
 
 
@@ -115,7 +115,7 @@
 # D={'a' : 1, 'b' : 2, 'c' : 3}
 # print(D.get('e'))
 
-# thisdict = { 
+# thisdict = {
 #     "brand": "Ford",
 #     "model": "Mustang",
 #     "year": 1964,
@@ -144,13 +144,13 @@
 # print(thisdict)
 
 
-# 
+#
 
 
-# Tuple trong Python là một kiểu dữ liệu dùng để lưu trữ một nhóm các phần tử. 
-# Các phần tử trong một tuple có thể thuộc các kiểu dữ liệu khác nhau (int, 
-# float, string, v.v.). Tuple rất giống với danh sách (list), nhưng có một điểm 
-# khác biệt quan trọng là tuple không thể thay đổi (immutable) sau khi đã được 
+# Tuple trong Python là một kiểu dữ liệu dùng để lưu trữ một nhóm các phần tử.
+# Các phần tử trong một tuple có thể thuộc các kiểu dữ liệu khác nhau (int,
+# float, string, v.v.). Tuple rất giống với danh sách (list), nhưng có một điểm
+# khác biệt quan trọng là tuple không thể thay đổi (immutable) sau khi đã được
 # tạo ra, tức là bạn không thể thay đổi giá trị của các phần tử trong tuple.
 
 # T=(1,2,3)
@@ -162,10 +162,10 @@
 # set(): not duplicate, not sorted,
 # mutable: add, remove, update
 
-X=set('spamm')
-Y={'h','a','m'}
-# print(X,Y)
-
+# X=set('spamm')
+# Y={'h','a','m'}
+# # print(X,Y)
+# print(X)
 # print(X&Y)
 
 # print(X|Y)
@@ -235,7 +235,7 @@ Y={'h','a','m'}
 # (*variable_1, variable_2, variable_3) = fruits
 # print(variable_1[-1::-1], variable_2, variable_3)
 
-# y=3 
+# y=3
 # x=y//2
 
 # while x>1:
@@ -335,7 +335,7 @@ Y={'h','a','m'}
 #     print(item, 'appears at offset', offset)
 
 
-# l=[1, 2, 3, 4, 5]   
+# l=[1, 2, 3, 4, 5]
 # l=[x+10 for x in l]
 # print(l)
 
@@ -436,7 +436,7 @@ Y={'h','a','m'}
 #         'ham': 1.99,
 #         'eggs': 0.99}
 
-# print(branch.get('spam', 'Bad choice'))    
+# print(branch.get('spam', 'Bad choice'))
 
 
 
@@ -497,13 +497,13 @@ Y={'h','a','m'}
 
 
 
-# L = [1, 2, 3, 4, 5] 
+# L = [1, 2, 3, 4, 5]
 # for i in range(len(L)):
 #     L[i] = L[i] + 1
 # print(L)
 
 
-# M = [1, 2, 3, 4, 5] 
+# M = [1, 2, 3, 4, 5]
 # for x in M:
 #     x += 1
 # print(M)
@@ -521,7 +521,7 @@ Y={'h','a','m'}
 #     print(x, y, "=>", x+y)
 
 
-# dictionary with zip 
+# dictionary with zip
 # keys=['name', 'job', 'zip']
 # values=[1, 2, 3]
 # d=dict(zip(keys, values))
@@ -570,18 +570,18 @@ Y={'h','a','m'}
 
 
 # # coding functions
-seq1=[1, 2, 3, 4, 5]
-seq2=[5, 7, 8, 9, 10]
-
-
-def intersect(seq1, seq2):
-    res=[]
-    for x in seq1:
-        if x in seq2:
-            res.append(x)
-    return res
-
-print(intersect(seq1, seq2))
+# seq1=[1, 2, 3, 4, 5]
+# seq2=[5, 7, 8, 9, 10]
+#
+#
+# def intersect(seq1, seq2):
+#     res=[]
+#     for x in seq1:
+#         if x in seq2:
+#             res.append(x)
+#     return res
+#
+# print(intersect(seq1, seq2))
 
 # x = 300
 # def myfunc():
@@ -627,3 +627,44 @@ print(intersect(seq1, seq2))
 #     first, *rest = L  # [1, 2, 3, 4, 5]
 #     return first if not rest else first + mysum3(rest)
 # print(mysum3(L))
+
+
+
+# f=lambda x, y, z: x+y+z
+# print(f(2, 3, 4))
+#
+# def f1(x): return x**2
+# def f2(x): return x**3
+# def f3(x): return x**4
+#
+# L=[f1, f2, f3]
+#
+# for fz in L:
+#     print(fz(2))
+#
+
+# print(L[0](3))
+
+
+
+# def action(x):
+#     return lambda y: x+y
+#
+# act=action(99)
+# print(act(2))
+#
+#
+# action2=lambda x: lambda y: x+y
+#
+# act1=action2(99)
+# print(act1(2))
+
+# from functools import reduce
+# print(reduce((lambda x, y: x+y), [1, 2, 3, 4, 5]))
+
+
+
+x=[1, 2, 3, 4, 5]
+y=2
+temp_func=(i**y for i in x)
+print(list(temp_func))

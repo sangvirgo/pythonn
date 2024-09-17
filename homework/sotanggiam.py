@@ -1,27 +1,31 @@
 t=int(input().strip())
 """
-3
+4
 12342
 23342
 5678961
+123425
 """
 for _ in range(t):
-    n=input().strip()
-    n=list(n)
-    check=True
-    decrease=False
+    n=list(input().strip())
+    if len(n)<3:
+        print("NO")
+        continue
+
+    increase=True
+    ok=True
     for i in range(len(n)-1):
-        if (int(n[i]) == int(n[i + 1])):
-            check = False
+        if n[i]==n[i+1]:
+            print("NO")
+            ok=False
             break
-        if decrease==False:
-            if (int(n[i]) > int(n[i + 1])):
-                decrease=True
-        elif decrease==True:
-            if (int(n[i]) > int(n[i + 1])):
-                check=False
-                break
-    if check:
+        if increase and n[i]>n[i+1]:
+            increase=False
+        if not increase and n[i]<n[i+1]:
+            print("NO")
+            ok=False
+            break
+    if not increase and ok:
         print("YES")
-    else:
+    elif increase and ok:
         print("NO")
