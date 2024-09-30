@@ -663,8 +663,10 @@
 # print(reduce((lambda x, y: x+y), [1, 2, 3, 4, 5]))
 
 
+#
+# x=[1, 2, 3, 4, 5]
+# y=2
+# temp_func=(i**y for i in x)
+# print(list(temp_func))
 
-x=[1, 2, 3, 4, 5]
-y=2
-temp_func=(i**y for i in x)
-print(list(temp_func))
+

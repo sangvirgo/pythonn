@@ -13,16 +13,14 @@ class  Point(object):
         a=self.distance(p1)
         b=self.distance(p2)
         c=p1.distance(p2)
-        EPSILON=1e-9
-        return (a+b>c+EPSILON) and (a+c>b+EPSILON) and (b+c>a+EPSILON)
+        return (a+b>c) and (a+c>b) and (b+c>a)
 
 
 
 def main():
     t=int(input().strip())
     for _ in range(t):
-        arr=[float(i.strip()) for i in input().strip().split()]
-        x1, y1, x2, y2, x3, y3=arr
+        x1, y1, x2, y2, x3, y3=map(float, input().split())
         p1=Point(x1, y1)
         p2=Point(x2, y2)
         p3=Point(x3, y3)
@@ -30,6 +28,7 @@ def main():
             a=p1.distance(p2)
             b=p1.distance(p3)
             c=p2.distance(p3)
+            print(a, b, c)
             print(f"{(a+b+c):.3f}")
         else:
             print("INVALID")
