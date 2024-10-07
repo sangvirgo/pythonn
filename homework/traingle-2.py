@@ -19,7 +19,7 @@ class Triangle:
         b=self.p2.distance(self.p3)
         c=self.p1.distance(self.p3)
         if (a + b > c) and (a + c > b) and (b + c > a):
-            print("{:.3f}".format(a+b+c))
+            print("{:.2f}".format(0.25*math.sqrt((a+b+c)*(a+b-c)*(-a+b+c)*(a-b+c))))
         else:
             print("INVALID")
 

@@ -670,3 +670,64 @@
 # print(list(temp_func))
 
 
+
+
+# import numpy as np
+#
+# # 1. Sinh ngẫu nhiên các phần tử số nguyên cho mảng 3 chiều (4, 3, 2); giá trị các phần tử nằm trong đoạn [1, 10]
+# array = np.random.randint(1, 11, size=(4, 3, 2))
+# print("Mảng ngẫu nhiên 3 chiều (4, 3, 2):\n", array)
+#
+# # 2. Xuất ra vị trí của các phần tử thỏa điều kiện: >= 2
+# condition = np.where(array >= 2)
+# print("\nVị trí của các phần tử >= 2:\n", condition)
+#
+# # 3. Tính tổng các phần tử theo axis 0, 1, 2
+# sum_axis0 = np.sum(array, axis=0)
+# sum_axis1 = np.sum(array, axis=1)
+# sum_axis2 = np.sum(array, axis=2)
+#
+# print("\nTổng các phần tử theo axis 0:\n", sum_axis0)
+# print("\nTổng các phần tử theo axis 1:\n", sum_axis1)
+# print("\nTổng các phần tử theo axis 2:\n", sum_axis2)
+
+
+
+
+import numpy as np
+from collections import Counter
+
+# 1. Sinh ngẫu nhiên các phần tử số nguyên cho mảng 3 chiều (4, 3, 2); giá trị các phần tử nằm trong đoạn [1, 10]
+array = np.random.randint(1, 11, size=(4, 3, 2))
+print("Mảng ngẫu nhiên 3 chiều (4, 3, 2):\n", array)
+
+# 2. Xuất ra vị trí của các phần tử thỏa điều kiện: >= 2
+condition = np.where(array >= 2)
+print("\nVị trí của các phần tử >= 2:\n", condition)
+
+# 3. Tính tổng các phần tử theo axis 0, 1, 2
+sum_axis0 = np.sum(array, axis=0)
+sum_axis1 = np.sum(array, axis=1)
+sum_axis2 = np.sum(array, axis=2)
+
+print("\nTổng các phần tử theo axis 0:\n", sum_axis0)
+print("\nTổng các phần tử theo axis 1:\n", sum_axis1)
+print("\nTổng các phần tử theo axis 2:\n", sum_axis2)
+
+# 4. Tính tổng các phần tử duy nhất trong mảng
+unique_elements = np.unique(array)
+sum_unique = np.sum(unique_elements)
+print("\nTổng các phần tử duy nhất trong mảng:\n", sum_unique)
+
+# 5. Tìm phần tử xuất hiện nhiều nhất trong mảng sử dụng np.unique và return_counts
+flat_array = array.flatten()
+unique_values, occurrence_count = np.unique(flat_array, return_counts=True)
+max_count_index = np.argmax(occurrence_count)  # Tìm chỉ số của phần tử xuất hiện nhiều nhất
+most_frequent_value = unique_values[max_count_index]
+most_frequent_count = occurrence_count[max_count_index]
+
+print("\nPhần tử xuất hiện nhiều nhất:", most_frequent_value, "với số lần xuất hiện:", most_frequent_count)
+
+# 6. Tìm 3 phần tử có giá trị lớn nhất trong mảng
+top_3_elements = np.sort(flat_array)[-3:]  # Sắp xếp và lấy 3 phần tử cuối (lớn nhất)
+print("\n3 phần tử có giá trị lớn nhất trong mảng:\n", top_3_elements)
