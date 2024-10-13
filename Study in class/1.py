@@ -1,6 +1,13 @@
 # import math
 
-# print(math.trunc(-3.14))
+# print(math.trunc(2.9))
+# print(math.floor(2.9))
+# print(math.ceil(2.9))
+# print(round(5.2233, 2))
+
+# print(oct(64))
+# print(hex(64))
+
 
 # x = 0b001
 # print(x<<2)
@@ -8,6 +15,19 @@
 
 # print(144**.5)
 
+# import random
+# print(random.random())
+# suits=['hearts', 'clubs', 'diamonds', 'spades']
+# print(random.choice(suits))
+
+# mantra="""Always look
+# on the bright"""
+# print(mantra)
+
+
+# S = 'Spam pa'
+# print(S.find('pa'))
+# print(S.rfind('pa'))
 # a=3
 
 # s="1,22\times333, 4444, \next,"
@@ -61,12 +81,12 @@
 # L1[0]=4
 # print(L2)
 
-# import copy
+import copy
 # y=[1,2,3]
 # x1=copy.copy(y)
 # x2=copy.deepcopy(y)
 # print(x1)
-# print(x2) => same
+# print(x2)
 
 # y=[[4, [11, 56],5], [6,7]]
 # x1=copy.copy(y)
@@ -80,22 +100,26 @@
 
 
 # Y = [[2, [3, 31], 4], [2, 3, [4, 41]], 3]
-
+#
 # X1 = copy.copy(Y)
 # X2 = copy.deepcopy(Y)
 
 # Y[2] = 5  # Thay đổi phần tử cấp cao nhất của Y
-
+# print("Y", Y)
 # print("X1", X1)
 # print("X2", X2)
 
 # Y[0][1][1] = 1  # Thay đổi phần tử bên trong một danh sách con của Y
-
+#
 # print("X1", X1)
 # print("X2", X2)
 
+# X2[0][1][1] = 1
+# X1[0][1][1] = 1
 
-
+# print("Y", Y)
+# print("X1", X1)
+# print("X2", X2)
 # variable_1 = ["apple", "banana", "cherry", "orange"]
 
 # print(variable_1[:-1], end="; ")
@@ -697,37 +721,253 @@
 import numpy as np
 from collections import Counter
 
-# 1. Sinh ngẫu nhiên các phần tử số nguyên cho mảng 3 chiều (4, 3, 2); giá trị các phần tử nằm trong đoạn [1, 10]
-array = np.random.randint(1, 11, size=(4, 3, 2))
-print("Mảng ngẫu nhiên 3 chiều (4, 3, 2):\n", array)
+# # 1. Sinh ngẫu nhiên các phần tử số nguyên cho mảng 3 chiều (4, 3, 2); giá trị các phần tử nằm trong đoạn [1, 10]
+# array = np.random.randint(1, 11, size=(4, 3, 2))
+# print("Mảng ngẫu nhiên 3 chiều (4, 3, 2):\n", array)
+#
+# # 2. Xuất ra vị trí của các phần tử thỏa điều kiện: >= 2
+# condition = np.where(array >= 2)
+# print("\nVị trí của các phần tử >= 2:\n", condition)
+#
+# # 3. Tính tổng các phần tử theo axis 0, 1, 2
+# sum_axis0 = np.sum(array, axis=0)
+# sum_axis1 = np.sum(array, axis=1)
+# sum_axis2 = np.sum(array, axis=2)
+#
+# print("\nTổng các phần tử theo axis 0:\n", sum_axis0)
+# print("\nTổng các phần tử theo axis 1:\n", sum_axis1)
+# print("\nTổng các phần tử theo axis 2:\n", sum_axis2)
+#
+# # 4. Tính tổng các phần tử duy nhất trong mảng
+# unique_elements = np.unique(array)
+# sum_unique = np.sum(unique_elements)
+# print("\nTổng các phần tử duy nhất trong mảng:\n", sum_unique)
+#
+# # 5. Tìm phần tử xuất hiện nhiều nhất trong mảng sử dụng np.unique và return_counts
+# flat_array = array.flatten()
+# unique_values, occurrence_count = np.unique(flat_array, return_counts=True)
+# max_count_index = np.argmax(occurrence_count)  # Tìm chỉ số của phần tử xuất hiện nhiều nhất
+# most_frequent_value = unique_values[max_count_index]
+# most_frequent_count = occurrence_count[max_count_index]
+#
+# print("\nPhần tử xuất hiện nhiều nhất:", most_frequent_value, "với số lần xuất hiện:", most_frequent_count)
+#
+# # 6. Tìm 3 phần tử có giá trị lớn nhất trong mảng
+# top_3_elements = np.sort(flat_array)[-3:]  # Sắp xếp và lấy 3 phần tử cuối (lớn nhất)
+# print("\n3 phần tử có giá trị lớn nhất trong mảng:\n", top_3_elements)
 
-# 2. Xuất ra vị trí của các phần tử thỏa điều kiện: >= 2
-condition = np.where(array >= 2)
-print("\nVị trí của các phần tử >= 2:\n", condition)
 
-# 3. Tính tổng các phần tử theo axis 0, 1, 2
-sum_axis0 = np.sum(array, axis=0)
-sum_axis1 = np.sum(array, axis=1)
-sum_axis2 = np.sum(array, axis=2)
 
-print("\nTổng các phần tử theo axis 0:\n", sum_axis0)
-print("\nTổng các phần tử theo axis 1:\n", sum_axis1)
-print("\nTổng các phần tử theo axis 2:\n", sum_axis2)
+# line='abc, 123, cba, 456, 321'
+# print(line.split(', '))
+#
+# txt = "banana            ,,,,,ssqqqww....."
+# x = txt.rstrip(",.qsw")
+# print(x)
 
-# 4. Tính tổng các phần tử duy nhất trong mảng
-unique_elements = np.unique(array)
-sum_unique = np.sum(unique_elements)
-print("\nTổng các phần tử duy nhất trong mảng:\n", sum_unique)
+# txt = ",,,,,rrttgg.....                         banana....rrr"
+# x = txt.strip(",.grt")
+# print(x)
 
-# 5. Tìm phần tử xuất hiện nhiều nhất trong mảng sử dụng np.unique và return_counts
-flat_array = array.flatten()
-unique_values, occurrence_count = np.unique(flat_array, return_counts=True)
-max_count_index = np.argmax(occurrence_count)  # Tìm chỉ số của phần tử xuất hiện nhiều nhất
-most_frequent_value = unique_values[max_count_index]
-most_frequent_count = occurrence_count[max_count_index]
 
-print("\nPhần tử xuất hiện nhiều nhất:", most_frequent_value, "với số lần xuất hiện:", most_frequent_count)
+# print('%s, egg, and %s' % ('spam', 'SPAM!'))
+# print(1, 2, 3, 4, sep='*')
+# x = 36 / 4 * (3 +  2) * 4 + 2
+# print(x)
+# for x in range(0.5, 5.5, 0.5):
+#   print(x)
+# sampleList = ["Jon", "Kelly", "Jessa"]
+# sampleList.insert(2, "Scott")
+# print(sampleList)
 
-# 6. Tìm 3 phần tử có giá trị lớn nhất trong mảng
-top_3_elements = np.sort(flat_array)[-3:]  # Sắp xếp và lấy 3 phần tử cuối (lớn nhất)
-print("\n3 phần tử có giá trị lớn nhất trong mảng:\n", top_3_elements)
+
+# template = '{motto}, {0} and {food}'
+# print(template.format('ham', motto='spam', food='eggs'))
+
+
+
+# thisdict = {"brand": "Ford", "model": "Mustang",
+# "year": "1964"}
+# for x in thisdict: print(x) # keys
+# for x in thisdict.values(): print(x) # keys
+# for x, y in thisdict.items(): print(x, y) # (key,
+
+
+
+# thisdict = {
+# "brand": "Ford",
+# "model": "Mustang",
+# "year": 1964,
+# "tmp":[500, [600,700], 700]
+# }
+# mydict = thisdict.copy()
+#
+# thisdict["year"] = 2018
+# print(thisdict)
+# print(mydict)
+
+
+# a, *b=1, 2, 3, 4
+# print(a, b)
+# string = "Spam"
+# a, b, c = list(string[:2]) + [string[2:]]
+# print(a, b, c)
+
+
+# L = [1, 2]
+# M = L
+# L = L + [3, 4]
+# print(L, M)
+# L = [1, 2]
+# M = L
+# L += [3, 4] # extend
+# print(1, 2, 3, sep="*")
+
+# branch = {'spam': 1.25, 'ham': 1.99, 'eggs': 0.99}
+
+# print(branch.get('spam', 'Bad choice'))
+# print(branch.get('bacon', 'Bad choice'))
+
+#
+# try :
+#     print(branch['bacon'])
+# except KeyError:
+#     print('Bad choice')
+
+
+# print(['f', 't'][bool('')])
+# print(['f', 't'][bool('spam')])
+
+
+# a='t' if 'Spam' else 'f'
+# print(a)
+# b=5 if '' else 0
+# print(b)
+
+
+# D = {'a': 1, 'b': 2, 'c': 3}
+# for key in D:
+#     print(key, '=>', D[key])
+
+
+# L = [1, 2, 3, 4, 5]
+# for i in range(len(L)):
+#     L[i] = L[i] + 1
+# print(L)
+#
+# h = [1, 2, 3, 4, 5]
+# for x in h:
+#     x=x+1
+# print(h)
+
+
+# keys = ['spam', 'eggs', 'toast']
+# vals = [1, 3, 5]
+# d=dict(zip(keys, vals))
+# print(d)
+#
+# d1={k: v for(k, v) in zip(keys, vals)}
+# print(d1)
+
+# S='spam'
+# for (offset, item) in enumerate(S):
+#     print(item, 'appears at offset', offset)
+
+
+
+# list comprehensions
+# L = [1, 2, 3, 4, 5]
+# L = [x + 10 for x in L]
+
+
+# Giải thích về global trong Python
+# Trong Python, từ khóa global được sử dụng để khai báo rằng một biến được định
+# nghĩa bên trong một hàm là biến toàn cục (global variable), nghĩa là biến này
+# có phạm vi truy cập trong toàn bộ chương trình, chứ không chỉ giới hạn trong
+# hàm đó. Khi sử dụng global, bất kỳ thay đổi nào đối với biến đó trong hàm sẽ
+# ảnh hưởng đến biến toàn cục bên ngoài hàm.
+
+# X = 99
+#
+# def f1():
+#     # global X
+#     X = 88
+#     def f2():
+#         print(X)
+#     f2()
+#
+# f1() # 88
+
+# def f1():
+#     x = 88
+#     def f2():
+#         print(x) # x readable
+#         X=10
+#     f2()
+# f1()
+
+
+# Từ khóa nonlocal trong Python được sử dụng để chỉ rằng một biến không phải là cục bộ trong
+# hàm hiện tại mà thuộc về phạm vi của hàm bao quanh gần nhất.
+# def f1():
+#     x = 88
+#     def f2():
+#         nonlocal x
+#         print(x)
+#         x = 10
+#     f2()
+#     print(x)
+# f1()
+
+
+# def changer(a, b):
+#     a= 2
+#     b[0] = 'spam'
+#
+# X = 1
+# L = [1, 2]
+# changer(X, L)
+# print(X, L)
+
+# def multiple(x, y):
+#     x = 2
+#     y = [3, 4]
+#     return x, y
+#
+# X = 1
+# L = [1, 2]
+# A, B = multiple(X, L)
+# print(A, B)
+# print(X, L)
+
+
+# def f(**args): print(args)
+# f()
+# f(a=1, b=2)
+
+
+
+# def f(a, *pargs, **kargs):
+#     print(a, pargs, kargs)
+#
+# f(1, 2, 3, x=1, y=2)
+
+# iải thích chi tiết:
+# Định nghĩa hàm f:
+#
+# a: Đây là đối số đầu tiên, được truyền trực tiếp.
+# *pargs: Đây là danh sách các đối số không xác định số lượng (positional arguments). Các đối số vị trí bổ sung sẽ được gom vào trong pargs dưới dạng một tuple.
+# **kargs: Đây là danh sách các đối số từ khóa không xác định số lượng (keyword arguments). Các đối số từ khóa bổ sung sẽ được gom vào kargs dưới dạng một dictionary.
+# Gọi hàm f(1, 2, 3, x=1, y=2):
+#
+# 1: Đây là đối số đầu tiên và được gán cho a.
+# 2, 3: Đây là các đối số vị trí bổ sung, nên chúng sẽ được gộp vào tuple pargs.
+# x=1, y=2: Đây là các đối số từ khóa, nên chúng sẽ được gộp vào dictionary kargs.
+# Kết quả của print(a, pargs, kargs):
+#
+# a là 1, vì 1 là đối số đầu tiên được truyền.
+# pargs là (2, 3), vì 2 và 3 là các đối số vị trí bổ sung và được gộp vào tuple pargs.
+# kargs là {'x': 1, 'y': 2}, vì x=1 và y=2 là các đối số từ khóa và được gộp vào dictionary kargs.
+
+f=lambda x, y, z: x+y+z
+print(f(2, 3, 4))
