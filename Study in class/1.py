@@ -969,5 +969,130 @@ from collections import Counter
 # pargs là (2, 3), vì 2 và 3 là các đối số vị trí bổ sung và được gộp vào tuple pargs.
 # kargs là {'x': 1, 'y': 2}, vì x=1 và y=2 là các đối số từ khóa và được gộp vào dictionary kargs.
 
-f=lambda x, y, z: x+y+z
-print(f(2, 3, 4))
+# f=lambda x, y, z: x+y+z
+# print(f(2, 3, 4))
+
+
+# def gensquares(N):
+#     for i in range(N):
+#         yield i ** 2
+#
+# for i in gensquares(5):
+#     print(i, end=' : ')
+
+
+
+# # (1) List Comprehension
+# def scramble(seq):
+#     return [seq[i:] + seq[:i] for i in range(len(seq))]
+#
+# # Kết quả
+# print(scramble('spam'))
+# # Output: ['spam', 'pams', 'amsp', 'mspa']
+#
+# # (2) Generator Function
+# def scramble(seq):
+#     for i in range(len(seq)):
+#         yield seq[i:] + seq[:i]
+#
+# # Sử dụng generator
+# print(list(scramble('spam')))
+# # Output: ['spam', 'pams', 'amsp', 'mspa']
+#
+#
+# # (3) Generator Expression
+# def scramble(seq):
+#     return (seq[i:] + seq[:i] for i in range(len(seq)))
+#
+# # Sử dụng generator
+# print(list(scramble('spam')))
+# # Output: ['spam', 'pams', 'amsp', 'mspa']
+
+
+
+import numpy as np
+# a = np.arange(15).reshape(3, 5)
+# print(a)
+# print(a.shape)
+
+# a = np.array([1, 2, 3])
+#
+#  # array([0., 0.])
+# print(np.zeros(2))
+#  # array([1., 1.])
+# print(np.ones(2))
+#
+# print(np.linspace(0, 10, num=5))
+
+# a = np.array([[1,8,4], [3,1,6]])
+# print(a)
+# print(np.sort(a, axis=0))
+# print(np.sort(a, axis=1))
+
+# a = np.array([[1 , 2, 9, 4], [5, 6, -1, 8], [9, 10, 11, 12]])
+# print(a[a >= 5])
+# b = np.nonzero(a >= 5)
+# print(b)
+#
+#
+# list_of_coordinates= list(zip(b[0], b[1]))
+# print(list_of_coordinates)
+# print(a[b])
+
+
+# data = np.array([[1, 2], [3, 4], [5, 6]])
+# print(data[0, 1]) #2
+# print(data[1:3]) # data[1:3, ]
+# print(data[0:2, 0]) #array([1, 3])
+
+# a = np.array([11, 11, 12, 13, 14, 15, 16, 17, 12, 13, 11, 14, 18, 19, 20])
+# unique_values = np.unique(a)
+# print(unique_values)
+
+
+# unique_values, indices_list = np.unique(a, return_index=True)
+# print(unique_values, indices_list)
+#
+# unique_values, occurrence_count = np.unique(a, return_counts=True)
+# print(unique_values, occurrence_count)
+
+
+# arr_2d = np.array([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
+# # reverse only the rows
+# reversed_arr_rows = np.flip(arr_2d, axis=0)
+# print(reversed_arr_rows)
+#
+# reversed_arr_columns = np.flip(arr_2d, axis=1)
+# print(reversed_arr_columns)
+
+
+# class Foo:
+#     def printLine(self, line='Python'):
+#         print(line)
+#
+# o1 = Foo()
+# o1.printLine('Java')
+
+
+# def outerFunction():
+#     global a
+#     a = 20
+# def innerFunction():
+#     global a
+#     a = 30
+#     print('a =', a)
+# a = 10
+# outerFunction()
+# print('a =', a)
+
+
+class A:
+    def __init__(self):
+        self.a = 1
+        self.__b = 1
+
+def getY(self):
+    return self.__b
+obj = A()
+obj.a = 45
+print(obj.a)
