@@ -1,3 +1,1 @@
-dic={}
-p="ABCDEFGHIJKLMNOPQRSTUVWXYZ_."
-print(p[0:3])
+print('c'.upper())

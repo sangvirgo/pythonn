@@ -1,19 +1,18 @@
 def check(s):
-    for i in range(3, len(s)):
-        if  s[i]!='_' and not s[i].isalpha() or s[i]!='.':
+    if len(s)<3:
+        return False
+    if not s.lower().endswith('.py'):
+        return False
+    for c in s[:-3]:
+        if not (c.isalpha() or c!='.' or c!='_'):
             return False
-        return True
+    return True
 
 s=input()
-
-s=s[::-1]
-if s[0:3]!="yp.":
-    print("no")
+if check(s):
+    print('yes')
 else:
-    if check(s):
-        print('yes')
-    else:
-        print('no')
+    print('no')
 
 
 '''
