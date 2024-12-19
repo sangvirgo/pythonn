@@ -1,1 +1,1 @@
-print('c'.upper())
+print(f"{100:02d}")

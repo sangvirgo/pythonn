@@ -7,12 +7,11 @@ def sum_of_num(x):
 
 def solve():
   t=int(input())
-  n=int(input())
-  arr=list(map(int, input().split()))
-  arr.sort(key= lambda x: (sum_of_num(x), x))
-  # print(*(x for x in arr), end=" ")
-  for x in arr:
-    print(x, end=" ")
+  for _ in range(t):
+    n = int(input())
+    arr = list(map(int, input().split()))
+    arr.sort(key=lambda x: (sum_of_num(x), x))
+    print(*arr)
 
 solve()
 '''
