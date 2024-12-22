@@ -1,0 +1,1 @@
+[print(x, y) for x in [2, 3] for y in ["x", "y"]]
