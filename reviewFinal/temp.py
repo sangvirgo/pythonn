@@ -1,27 +1,24 @@
-from itertools import combinations
+import numpy as np
+a=np.array([2, 3, 4])
+print(a)
+
+b=np.arange(15).reshape(3, 5)
+print(b)
+
+# c=np.empty(3)
+# print(c)
+#
+#
+# d=np.ones((3, 2))
+# print(d)
+#
+# e=np.zeros((3, 2))
+# print(e)
+#
+# f=np.random.default_rng().random(3, 2)
+# print(f)
 
 
-def get_k_skips_n_grams(k, n, input_str):
-    # Convert the input string into a list of words
-    words = input_str.split()
-    result = []
-
-    # Iterate through the list to generate k-skip n-grams
-    for i in range(len(words)):
-        # Generate the range of indices to consider for this k-skip n-gram
-        indices = range(i, min(i + k + n, len(words)))
-        for combination in combinations(indices, n):
-            # Ensure the words in the combination are in order
-            if all(combination[j] < combination[j + 1] for j in range(len(combination) - 1)):
-                result.append(' '.join(words[idx] for idx in combination))
-
-    # Print the result
-    print(', '.join(result))
-
-
-# Input and function call
-k = int(input())  # Maximum skip distance
-n = int(input())  # Length of n-grams
-input_str = input().strip()  # Input text
-
-get_k_skips_n_grams(k, n, input_str)
+r= np.array([11, 11, 12, 13, 14, 15, 16, 17, 12, 13, 11, 14, 18, 19, 20])
+h=np.unique(r)
+print(h)
